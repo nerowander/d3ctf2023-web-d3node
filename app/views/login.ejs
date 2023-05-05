@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+</head>
+<!-- /getHint1 -->
+<body>
+<div id="login-box">
+    <h1>Login</h1>
+    <form action="/user/LoginIndex" method="post">
+        <div class="form-text">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required>
+            <button onclick="emptyUsername(event)" class="bi bi-trash" style="padding: 10px;border-radius: 5px;border: 2px solid #ccc;font-size: 16px;"></button>
+        </div>
+
+        <div class="form-text">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            <button onclick="emptyPassword(event)" class="bi bi-trash" style="padding: 10px;border-radius: 5px;border: 2px solid #ccc;font-size: 16px;"></button>
+        </div>
+        <input type="submit" value="Login" style="display: inline-block;">
+        <input type="button" value="Sign Up" onclick="window.location.href='/user/RegisterIndex'" style="float: right;display: inline-block;">
+    </form>
+    <div style="text-align: center">
+    <span id="result" style=""><%= login_result %></span>
+    </div>
+</div>
+<script>
+    function emptyUsername(event){
+        event.preventDefault();
+        document.getElementById("username").value = "";
+        return false;
+    }
+    function emptyPassword(event){
+        event.preventDefault();
+        document.getElementById("password").value = "";
+        return false;
+    }
+</script>
+</body>
+</html>

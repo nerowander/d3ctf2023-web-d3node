@@ -1,0 +1,120 @@
+/*custom font for text*/
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+/*CSS file for fontawesome - an iconfont we will be using. This CSS file imported contains the font-face declaration. More info: https://fortawesome.github.io/Font-Awesome/ */
+@import url(http://thecodeplayer.com/uploads/fonts/fontawesome/css/font-awesome.min.css);
+
+/*Basic reset*/
+* {margin: 0; padding: 0;}
+
+body {
+    background: #4EB889;
+    font-family: Nunito, arial, verdana, serif;
+}
+#accordian {
+    background: #004050;
+    width: 250px;
+    margin: 100px auto 0 auto;
+    color: white;
+    /*Some cool shadow and glow effect*/
+    box-shadow:
+            0 5px 15px 1px rgba(0, 0, 0, 0.6),
+            0 0 200px 1px rgba(255, 255, 255, 0.5);
+}
+/*heading styles*/
+#accordian h3 {
+    font-size: 12px;
+    line-height: 34px;
+    padding: 0 10px;
+    cursor: pointer;
+    /*fallback for browsers not supporting gradients*/
+    background: #003040;
+    background: linear-gradient(#003040, #002535);
+}
+/*heading hover effect*/
+#accordian h3:hover {
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+}
+/*iconfont styles*/
+#accordian h3 span {
+    font-size: 16px;
+    margin-right: 10px;
+}
+/*list items*/
+#accordian li {
+    list-style-type: none;
+}
+/*links*/
+#accordian ul ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 27px;
+    display: block;
+    padding: 0 15px;
+    /*transition for smooth hover animation*/
+    transition: all 0.15s;
+}
+/*hover effect on links*/
+#accordian ul ul li a:hover {
+    background: #003545;
+    border-left: 5px solid lightgreen;
+}
+/*Lets hide the non active LIs by default*/
+#accordian ul ul {
+    display: none;
+}
+#accordian li.active ul {
+    display: block;
+}
+
+pre {
+    width: 450px;
+    height: 30px;
+    overflow: auto;
+    resize: both;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid #ccc;
+    padding: 25px;
+    background: beige;
+    font-family: monospace;
+    position: relative;
+    color: #555;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #ccc inset;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto 0;
+
+}
+pre span {
+    position: absolute;
+    display: block;
+    background: #FFF;
+    top: 0;
+    right: 0;
+    border-radius: 0px 3px;
+    padding: 3px 5px;
+    font-size: 10px;
+    box-shadow: -2px 2px 5px #CCC;
+    color: #999;
+}
+pre:hover span {
+    display: none;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 2px solid #9334db;
+    border-radius: 13px;
+    width: 150px;
+    height: 40px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

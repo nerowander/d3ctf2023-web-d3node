@@ -1,0 +1,42 @@
+<head>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <title>Home</title>
+</head>
+<!-- /dashboardIndex/getHint2 -->
+<div class="box"><%= session_user %></div>
+<div id="accordian">
+    <ul>
+        <li>
+            <h3>Packages</h3>
+            <ul>
+                <li><a href="/dashboardIndex/PacksList">PacksList</a></li>
+                <li><a href="/dashboardIndex/PackDependencies">PackDependencies</a></li>
+            </ul>
+        </li>
+        <li class="active">
+            <h3>Files</h3>
+            <ul>
+                <li><a href="/dashboardIndex/Upload">Upload</a></li>
+                <li><a href="/dashboardIndex/UploadList">UploadList</a></li>
+                <li><a href="/dashboardIndex/ShowExampleFile">ShowExampleFile</a></li>
+            </ul>
+        </li>
+        <li>
+            <h3>Dependencies</h3>
+            <ul>
+                <li><a href="/dashboardIndex/SetDependencies">SetDependencies</a></li>
+                <li><a href="/dashboardIndex/KillDependencies">KillDependencies</a></li>
+            </ul>
+        </li>
+        <li>
+            <h3>Logout</h3>
+            <ul>
+                <li><a href="/dashboardIndex/Logout">Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<pre><%- message %><span>result</span>
+</pre>

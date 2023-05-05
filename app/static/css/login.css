@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#login-box {
+    width: 400px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #ddd;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+
+input[type="text"], input[type="password"] {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #7fb2f0;
+}
+
+
+input[type="submit"] {
+    background: #3498db;
+    border: none;
+    color: #fff;
+    padding: 10px 25px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #2d89e5
+}
+
+input[type="button"] {
+    background: #9334db;
+    border: none;
+    color: #fff;
+    padding: 10px 25px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background: #2d89e5
+}
+
+.form-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    line-height: 30px;
+}

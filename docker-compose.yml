@@ -1,0 +1,35 @@
+version: "3.0"
+
+services:
+  webapp:
+    build: .
+    ports:
+      - "10000:8080"
+    restart: always
+    networks:
+      my-net:
+          aliases:
+            - webapp
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:latest
+    container_name: "my-mongodb"
+    restart: always
+    networks:
+      my-net:
+        aliases:
+          - mongodb
+    environment:
+      - MONGO_INITDB_ROOT_PASSWORD=rooths1p2ns33vpt8gb0
+      - MONGO_INITDB_ROOT_USERNAME=rootxi3w1siz1uw73a74
+      - MONGO_INITDB_DATABASE=userInfoDB
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro # init database
+    command: ["mongod", "--bind_ip_all", "--quiet"]
+
+networks:
+  my-net:
+    driver: bridge

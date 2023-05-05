@@ -1,0 +1,7 @@
+{
+  "name": "app-example",
+  "version": "1.0.0",
+  "description": "Example app for the Node.js Getting Started guide.",
+  "author": "anonymous",
+  "license": "MIT"
+}
